@@ -3,6 +3,8 @@ provider "aws" {
   region = "us-west-2"
 }
 
+# AWSから最新のUbuntu AMI情報を動的に取得する
+# AMI IDをハードコードせず、常に最新版を使える
 data "aws_ami" "ubuntu" {
   most_recent = true
 
